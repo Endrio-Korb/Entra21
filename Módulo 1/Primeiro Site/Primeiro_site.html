@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="utf-8" />
+
+        <title>Meu primeiro site</title>
+        <meta name="description" content= "Codificação Front-End, SENAI"/>
+        <meta name="keywords" content="HTML, CSS, Javascript, SENAI"/>
+        <meta name="author" content="Endrio Alex Korb"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <style> 
+            div {
+                width: 100px;
+                height: 100px;
+                background: turquoise;
+                transition: width 1s;
+                transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+            }
+            
+            div:hover {
+                width:300px;
+            }
+        </style>
+
+	</head>
+	<body>
+
+        <p>Meu primeiro site</p>
+
+        <h1>A função cubic-bezier()</h1>
+        <p>Passe o mouse sobre o elemento div abaixo para ver o efeito de transição.</p>
+        <div></div>
+        <p><b>Observação:</b> este exemplo não funciona no Internet Explorer 9 e em versões anteriores.</p>
+
+        <p>Clique no botão para mudar a cor do background da tag <code>body</code>.</p>
+        <button>Mudar a cor do fundo</button>
+
+    <script>
+        var btn = document.querySelector('button');
+    
+        function random(number){
+            return Math.floor(Math.random()*(number+1));
+        }
+    
+        btn.onclick = function (){
+        var rndCol = 'rgb('+ random(255)+','+random(255)+','+random(255)+')';
+            document.body.style.backgroundColor = rndCol;
+        }
+    </script>
+
+	</body>
+</html>
